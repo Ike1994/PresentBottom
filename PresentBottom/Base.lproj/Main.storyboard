@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PresentBottom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxC-XV-FZC">
+                                <rect key="frame" x="161.5" y="314.5" width="52" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="showButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1D-H1-lzv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMb-Zi-g25">
+                                <rect key="frame" x="158" y="357.5" width="58" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="selectButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QXl-th-3hg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5x-Ef-5Nb">
+                                <rect key="frame" x="136" y="400.5" width="103" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="TimeSelect"/>
+                                <connections>
+                                    <action selector="timeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vfk-ob-RoR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MxC-XV-FZC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1hI-5a-guK"/>
+                            <constraint firstItem="MxC-XV-FZC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7zt-VB-jDF"/>
+                            <constraint firstItem="hMb-Zi-g25" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Itd-nb-vLe"/>
+                            <constraint firstItem="hMb-Zi-g25" firstAttribute="top" secondItem="MxC-XV-FZC" secondAttribute="bottom" constant="5" id="PHX-1I-PbE"/>
+                            <constraint firstItem="u5x-Ef-5Nb" firstAttribute="top" secondItem="hMb-Zi-g25" secondAttribute="bottom" constant="5" id="Zob-LO-GMH"/>
+                            <constraint firstItem="u5x-Ef-5Nb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="waH-MW-6zI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

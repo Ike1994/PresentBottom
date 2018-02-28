@@ -1,14 +1,14 @@
 ### 用UIPresentationController来写一个简洁漂亮的底部弹出控件
 
-iOS App开发过程中，底部弹出框是一个非常常见的需求。如何写一个漂亮的底部弹出框呢？方式有很多，直接添加一个自定义的View让它动画展示和隐藏都是一种非常简单的操作，不过看起来似乎不那么优雅，我们可以使用`UIPresentationController`来方便快捷地创建一个高定制化的底部弹出框。
+iOS App开发过程中，底部弹出框是一个非常常见的需求。如何写一个漂亮的底部弹出框呢？方式有很多，直接添加一个自定义的View让它动画展示和隐藏都是一种非常简单的操作，不过看起来似乎不那么优雅，我们可以使用`UIPresentationController`来方便快捷地创建一个高定制化的底部弹出框。`UIPresentationController`的官方文档地址如下：
 
-UIPresentationController: an object that manages the transition animations and the presentation of view controllers onscreen.
+[UIPresentationController](https://developer.apple.com/documentation/uikit/uipresentationcontroller): an object that manages the transition animations and the presentation of view controllers onscreen.
 
-最终效果如下：
+先上最终效果：
 
-![](https://user-gold-cdn.xitu.io/2018/2/28/161daff5fec6a3dc?w=256&h=456&f=gif&s=441809)
+![](https://raw.githubusercontent.com/IkeBanPC/PresentBottom/master/Pics/Select.gif)
 
-![](https://user-gold-cdn.xitu.io/2018/2/28/161daffa284f53cb?w=256&h=456&f=gif&s=437642)
+![](https://raw.githubusercontent.com/IkeBanPC/PresentBottom/master/Pics/TimeSelect.gif)
 
 我们需要在iOS8及以上的系统中使用`UIPresentationController`，使用时需要新建一个类继承UIPresentationController并重写以下几个方法和属性：
 
@@ -53,10 +53,10 @@ lazy var blackView: UIView = {
 ```Swift
 override func presentationTransitionWillBegin() {
     blackView.alpha = 0
-    containerView?.addSubview(blackLayerView)
+    containerView?.addSubview(blackLayerView）
     UIView.animate(withDuration: 0.5) {
         self.blackView.alpha = 1
-  	}
+    }
 }
 
 override func dismissalTransitionWillBegin() {
@@ -138,4 +138,4 @@ self.presentBottom(FirstBottomVC.self)
 
 效果如下图：
 
-![](https://user-gold-cdn.xitu.io/2018/2/28/161dad30952266a8?w=256&h=456&f=gif&s=190665)
+![](https://raw.githubusercontent.com/IkeBanPC/PresentBottom/master/Pics/FirstBottomVC.gif)

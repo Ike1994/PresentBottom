@@ -12,12 +12,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // show the example
     @IBAction func showButtonClicked(_ sender: UIButton) {
         self.presentBottom(FirstBottomVC.self)
     }
+    // show select view
     @IBAction func selectButtonClicked(_ sender: UIButton) {
         self.presentBottom(SelectionVC.self)
     }
+    // show time select view
     @IBAction func timeButtonClicked(_ sender: UIButton) {
         self.presentBottom(TimeSelectVC.self)
     }

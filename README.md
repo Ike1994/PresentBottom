@@ -10,7 +10,7 @@ iOS App开发过程中，底部弹出框是一个非常常见的需求。如何�
 
 ![](https://raw.githubusercontent.com/IkeBanPC/PresentBottom/master/Pics/TimeSelect.gif)
 
-我们需要在iOS8及以上的系统中使用`UIPresentationController`，使用时需要新建一个类继承UIPresentationController并重写以下几个方法和属性：
+我们需要在iOS8及以上的系统中使用`UIPresentationController`，使用时需要新建一个类继承`UIPresentationController`并重写以下几个方法和属性：
 
 ```Swift
 //决定了弹出框的frame
@@ -139,3 +139,7 @@ self.presentBottom(FirstBottomVC.self)
 效果如下图：
 
 ![](https://raw.githubusercontent.com/IkeBanPC/PresentBottom/master/Pics/FirstBottomVC.gif)
+
+测试用的弹框写好了，我们只要根据自己的需求去创建不同的`PresentBottomVC`的子类就可以方便快捷的实现各种各样的底部弹出框啦。实例中的两个效果可以参考源码。
+
+有什么问题欢迎沟通哦。

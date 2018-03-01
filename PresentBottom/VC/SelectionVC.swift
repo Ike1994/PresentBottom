@@ -10,9 +10,13 @@ import UIKit
 let kScreenWidth = UIScreen.main.bounds.width
 let kScreenHeight = UIScreen.main.bounds.height
 final class SelectionVC: PresentBottomVC {
+    
+    /// override the property to define the height of bottom vc
     override var controllerHeight: CGFloat {
         return 300
     }
+    
+    /// sureButton to hide bottom vc
     lazy var sureButton:UIButton = {
         let button = UIButton(frame: CGRect(x: kScreenWidth-60, y: 0, width: 40, height: 40))
         button.setImage(#imageLiteral(resourceName: "ic_sureButton"), for: .normal)
@@ -22,11 +26,15 @@ final class SelectionVC: PresentBottomVC {
         button.clipsToBounds = true
         return button
     }()
+    
+    /// conntainer view of bottom vc
     lazy var containerView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 75, width: kScreenWidth, height: kScreenHeight-75))
         view.backgroundColor = UIColor.white
         return view
     }()
+    
+    /// titleLabel
     lazy var titleLabel: UILabel = {
         let label = UILabel(frame:CGRect(x: (kScreenWidth-150)/2, y: 20, width: 150, height: 30))
         label.textAlignment = .center

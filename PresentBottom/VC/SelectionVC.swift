@@ -13,7 +13,7 @@ final class SelectionVC: PresentBottomVC {
     
     /// override the property to define the height of bottom vc
     override var controllerHeight: CGFloat {
-        return 300
+        return 300.0
     }
     
     /// sureButton to hide bottom vc

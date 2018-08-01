@@ -9,6 +9,10 @@
 import UIKit
 
 final class FirstBottomVC: PresentBottomVC {
+    override var controllerHeight: CGFloat {
+        return 200.0
+    }
+    
     lazy var closeButton:UIButton = {
         let button = UIButton(frame: CGRect(x: 15, y: 30, width: 80, height: 30))
         button.setTitle("Close", for: .normal)
@@ -16,9 +20,7 @@ final class FirstBottomVC: PresentBottomVC {
         button.addTarget(self, action: #selector(closeButtonClicked), for: .touchUpInside)
         return button
     }()
-    override var controllerHeight: CGFloat? {
-        return 200
-    }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cyan

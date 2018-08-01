@@ -9,9 +9,11 @@
 import UIKit
 
 final class TimeSelectVC: PresentBottomVC {
+    
     override var controllerHeight: CGFloat {
-        return 300
+        return 300.0
     }
+    
     lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: controllerHeight-75))
         datePicker.locale = Locale.current
